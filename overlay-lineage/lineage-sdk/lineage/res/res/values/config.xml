@@ -19,10 +19,10 @@
          This integer should equal the sum of the corresponding value for each
          of the following capabilities present:
 
-         // Device has a color adjustable battery light.
+         // Device has a color adjustable notification light.
          LIGHTS_RGB_NOTIFICATION_LED = 1
 
-         // Device has a color adjustable notification light.
+         // Device has a color adjustable battery light.
          LIGHTS_RGB_BATTERY_LED = 2
 
          LIGHTS_MULTIPLE_NOTIFICATION_LED = 4 (deprecated)
@@ -56,7 +56,7 @@
 
          For example, a device with notification and battery lights that supports
          pulsating and RGB control would set this config to 75. -->
-    <integer name="config_deviceLightCapabilities" translatable="false">0</integer>
+    <integer name="config_deviceLightCapabilities">75</integer>
 
     <!-- BurnIn protection. This should be enabled on devices that have OLED displays -->
     <bool name="config_enableBurnInProtection">true</bool>
