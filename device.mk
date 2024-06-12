@@ -70,9 +70,5 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
 	$(DEVICE_PATH)
 
-# Recovery
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/recovery/root/init.recovery.judyln.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.judyln.rc
-
 # common judy (sdm845)
 $(call inherit-product, device/lge/sdm845-common/sdm845.mk)
