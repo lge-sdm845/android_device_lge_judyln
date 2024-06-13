@@ -13,12 +13,7 @@ vendor/lib64/libsymphony-1.1.4.so
 vendor/lib64/libsymphonypower-1.1.4.so
 
 # ADSP (Modules)
-vendor/lib/rfsa/adsp/activity.so
 vendor/lib/rfsa/adsp/fastrpc_shell_0
-vendor/lib/rfsa/adsp/geofence.so
-vendor/lib/rfsa/adsp/lg_nanoapp_pa.so
-vendor/lib/rfsa/adsp/lg_nanoapp_sbd.so
-vendor/lib/rfsa/adsp/lg_nanoapp_su.so
 vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_skel.so
 vendor/lib/rfsa/adsp/libVC1Dec.so
 vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so
