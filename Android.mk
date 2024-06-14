@@ -27,4 +27,12 @@ LOCAL_PATH := $(call my-dir)
 
 ifneq ($(filter judyln,$(TARGET_DEVICE)),)
 include $(call all-makefiles-under,$(LOCAL_PATH))
+
+ADSP_MOUNT_POINT := $(TARGET_OUT_VENDOR)/lib/rfsa/adsp
+$(ADSP_MOUNT_POINT): $(LOCAL_INSTALLED_MODULE)
+	@echo "Creating $(ADSP_MOUNT_POINT)"
+	@mkdir -p $(TARGET_OUT_VENDOR)/lib/rfsa/adsp
+
+ALL_DEFAULT_INSTALLED_MODULES += $(ADSP_MOUNT_POINT)
+
 endif

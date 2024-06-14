@@ -1,0 +1,81 @@
+# Overlay mount ADSP modules
+# Some firmwares are out of date; mismatched ADSP modules cause broken in-call audio
+# G710N ADSP on older firmwares, G710AWM on newer firmwares
+
+## G710AWM
+on fs && property:ro.boot.vendor.lge.model.name=LM-G710AWM && property:ro.vendor.lge.swversion_svn=14
+    mount overlay overlay /vendor/lib/rfsa/adsp ro lowerdir=/vendor/overlayfs/NO30h/adsp:/vendor/lib/rfsa/adsp
+
+on fs && property:ro.boot.vendor.lge.model.name=LM-G710AWM && property:ro.vendor.lge.swversion_svn=15
+    mount overlay overlay /vendor/lib/rfsa/adsp ro lowerdir=/vendor/overlayfs/AWM30e/adsp:/vendor/lib/rfsa/adsp
+
+## G710EAW
+on fs && property:ro.boot.vendor.lge.model.name=LM-G710EAW && property:ro.vendor.lge.swversion_short=V30a
+    mount overlay overlay /vendor/lib/rfsa/adsp ro lowerdir=/vendor/overlayfs/NO30h/adsp:/vendor/lib/rfsa/adsp
+
+on fs && property:ro.boot.vendor.lge.model.name=LM-G710EAW && property:ro.vendor.lge.swversion_short=V30b
+    mount overlay overlay /vendor/lib/rfsa/adsp ro lowerdir=/vendor/overlayfs/AWM30e/adsp:/vendor/lib/rfsa/adsp
+
+on fs && property:ro.boot.vendor.lge.model.name=LM-G710EAW && property:ro.vendor.lge.swversion_short=V30c
+    mount overlay overlay /vendor/lib/rfsa/adsp ro lowerdir=/vendor/overlayfs/AWM30e/adsp:/vendor/lib/rfsa/adsp
+
+on fs && property:ro.boot.vendor.lge.model.name=LM-G710EAW && property:ro.vendor.lge.swversion_short=V30d
+    mount overlay overlay /vendor/lib/rfsa/adsp ro lowerdir=/vendor/overlayfs/AWM30e/adsp:/vendor/lib/rfsa/adsp
+
+on fs && property:ro.boot.vendor.lge.model.name=LM-G710EAW && property:ro.vendor.lge.swversion_short=V30e
+    mount overlay overlay /vendor/lib/rfsa/adsp ro lowerdir=/vendor/overlayfs/AWM30e/adsp:/vendor/lib/rfsa/adsp
+
+## G710EMW
+on fs && property:ro.boot.vendor.lge.model.name=LM-G710EMW && property:ro.vendor.lge.swversion_short=V30a
+    mount overlay overlay /vendor/lib/rfsa/adsp ro lowerdir=/vendor/overlayfs/NO30h/adsp:/vendor/lib/rfsa/adsp
+
+on fs && property:ro.boot.vendor.lge.model.name=LM-G710EMW && property:ro.vendor.lge.swversion_short=V30b
+    mount overlay overlay /vendor/lib/rfsa/adsp ro lowerdir=/vendor/overlayfs/NO30h/adsp:/vendor/lib/rfsa/adsp
+
+on fs && property:ro.boot.vendor.lge.model.name=LM-G710EMW && property:ro.vendor.lge.swversion_short=V30c
+    mount overlay overlay /vendor/lib/rfsa/adsp ro lowerdir=/vendor/overlayfs/NO30h/adsp:/vendor/lib/rfsa/adsp
+
+on fs && property:ro.boot.vendor.lge.model.name=LM-G710EMW && property:ro.vendor.lge.swversion_short=V30d
+    mount overlay overlay /vendor/lib/rfsa/adsp ro lowerdir=/vendor/overlayfs/AWM30e/adsp:/vendor/lib/rfsa/adsp
+
+on fs && property:ro.boot.vendor.lge.model.name=LM-G710EMW && property:ro.vendor.lge.swversion_short=V30e
+    mount overlay overlay /vendor/lib/rfsa/adsp ro lowerdir=/vendor/overlayfs/AWM30e/adsp:/vendor/lib/rfsa/adsp
+
+## G710EM
+on fs && property:ro.boot.vendor.lge.model.name=LM-G710EM && property:ro.vendor.lge.swversion_short=V30a
+    mount overlay overlay /vendor/lib/rfsa/adsp ro lowerdir=/vendor/overlayfs/NO30h/adsp:/vendor/lib/rfsa/adsp
+
+on fs && property:ro.boot.vendor.lge.model.name=LM-G710EM && property:ro.vendor.lge.swversion_short=V30b
+    mount overlay overlay /vendor/lib/rfsa/adsp ro lowerdir=/vendor/overlayfs/NO30h/adsp:/vendor/lib/rfsa/adsp
+
+on fs && property:ro.boot.vendor.lge.model.name=LM-G710EM && property:ro.vendor.lge.swversion_short=V30c
+    mount overlay overlay /vendor/lib/rfsa/adsp ro lowerdir=/vendor/overlayfs/NO30h/adsp:/vendor/lib/rfsa/adsp
+
+on fs && property:ro.boot.vendor.lge.model.name=LM-G710EM && property:ro.vendor.lge.swversion_short=V30d
+    mount overlay overlay /vendor/lib/rfsa/adsp ro lowerdir=/vendor/overlayfs/NO30h/adsp:/vendor/lib/rfsa/adsp
+
+on fs && property:ro.boot.vendor.lge.model.name=LM-G710EM && property:ro.vendor.lge.swversion_short=V30e
+    mount overlay overlay /vendor/lib/rfsa/adsp ro lowerdir=/vendor/overlayfs/NO30h/adsp:/vendor/lib/rfsa/adsp
+
+on fs && property:ro.boot.vendor.lge.model.name=LM-G710EM && property:ro.vendor.lge.swversion_short=V30f
+    mount overlay overlay /vendor/lib/rfsa/adsp ro lowerdir=/vendor/overlayfs/AWM30e/adsp:/vendor/lib/rfsa/adsp
+
+on fs && property:ro.boot.vendor.lge.model.name=LM-G710EM && property:ro.vendor.lge.swversion_short=V30g
+    mount overlay overlay /vendor/lib/rfsa/adsp ro lowerdir=/vendor/overlayfs/AWM30e/adsp:/vendor/lib/rfsa/adsp
+
+on fs && property:ro.boot.vendor.lge.model.name=LM-G710EM && property:ro.vendor.lge.swversion_short=V30h
+    mount overlay overlay /vendor/lib/rfsa/adsp ro lowerdir=/vendor/overlayfs/AWM30e/adsp:/vendor/lib/rfsa/adsp
+
+## G710N
+### G710N is special, it needs older ADSP in every case
+on fs && property:ro.boot.vendor.lge.model.name=LM-G710N
+    mount overlay overlay /vendor/lib/rfsa/adsp ro lowerdir=/vendor/overlayfs/NO30h/adsp:/vendor/lib/rfsa/adsp
+
+on fs && property:ro.boot.vendor.lge.model.name=LM-G710NO
+    mount overlay overlay /vendor/lib/rfsa/adsp ro lowerdir=/vendor/overlayfs/NO30h/adsp:/vendor/lib/rfsa/adsp
+
+on fs && property:ro.boot.vendor.lge.model.name=LM-G710NP
+    mount overlay overlay /vendor/lib/rfsa/adsp ro lowerdir=/vendor/overlayfs/NO30h/adsp:/vendor/lib/rfsa/adsp
+
+on fs && property:ro.boot.vendor.lge.model.name=LM-G710NOP
+    mount overlay overlay /vendor/lib/rfsa/adsp ro lowerdir=/vendor/overlayfs/NO30h/adsp:/vendor/lib/rfsa/adsp
