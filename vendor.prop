@@ -18,3 +18,5 @@ ro.vendor.lge.swversion=G71030e
 
 # USB
 vendor.usb.product_string=LG G7 ThinQ
+
+import /oem/OP/${ro.boot.vendor.lge.plmn}/cust.prop
