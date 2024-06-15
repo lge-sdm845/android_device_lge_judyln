@@ -70,5 +70,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
 	$(DEVICE_PATH)
 
+# Wi-Fi Overlay
+PRODUCT_PACKAGES += \
+    WifiOverlayG7
+
 # common judy (sdm845)
 $(call inherit-product, device/lge/sdm845-common/sdm845.mk)
