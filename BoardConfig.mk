@@ -31,8 +31,5 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 48708296704
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 BOARD_VENDORIMAGE_PARTITION_SIZE := 1048576000
 
-# Security Patch Level
-VENDOR_SECURITY_PATCH := 2020-07-01
-
 # inherit from the proprietary version
 include vendor/lge/judyln/BoardConfigVendor.mk
