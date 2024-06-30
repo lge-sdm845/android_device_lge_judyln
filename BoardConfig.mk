@@ -14,21 +14,8 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/lge/judyln
-
 # Inherit from common device tree
-include device/lge/sdm845-common/BoardConfigCommon.mk
-
-# Camera
-TARGET_USES_YCRCB_VENUS_CAMERA_PREVIEW := true
-
-# Kernel
-BOARD_KERNEL_CMDLINE += androidboot.hardware=judyln androidboot.fstab_suffix=judyln
-TARGET_KERNEL_CONFIG := lineageos_judyln_defconfig
-
-# Partitions
-BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
-BOARD_VENDORIMAGE_PARTITION_SIZE := 1048576000
+include device/lge/judyln-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
 include vendor/lge/judyln/BoardConfigVendor.mk

@@ -6,14 +6,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-function blob_fixup() {
-    case "${1}" in
-        vendor/lib/liblgsnpeawb.so|vendor/lib/libSNPE.so)
-	    "${PATCHELF_0_17_2}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
-	    ;;
-    esac
-}
-
 # If we're being sourced by the common script that we called,
 # stop right here. No need to go down the rabbit hole.
 if [ "${BASH_SOURCE[0]}" != "${0}" ]; then
@@ -23,8 +15,8 @@ fi
 set -e
 
 export DEVICE=judyln
-export DEVICE_COMMON=sdm845-common
+export DEVICE_SPECIFIED_COMMON=judyln-common
 export VENDOR=lge
-export VENDOR_COMMON=${VENDOR}
+export VENDOR_SPECIFIED_COMMON=${VENDOR}
 
-"./../../${VENDOR_COMMON}/${DEVICE_COMMON}/extract-files.sh" "$@"
+"./../../${VENDOR_SPECIFIED_COMMON}/${DEVICE_SPECIFIED_COMMON}/extract-files.sh" "$@"

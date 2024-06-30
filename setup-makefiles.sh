@@ -9,8 +9,8 @@
 set -e
 
 export DEVICE=judyln
-export DEVICE_COMMON=sdm845-common
+export DEVICE_SPECIFIED_COMMON=judyln-common
 export VENDOR=lge
-export VENDOR_COMMON=${VENDOR}
+export VENDOR_SPECIFIED_COMMON=${VENDOR}
 
-"./../../${VENDOR_COMMON}/${DEVICE_COMMON}/setup-makefiles.sh" "$@"
+"./../../${VENDOR_SPECIFIED_COMMON}/${DEVICE_SPECIFIED_COMMON}/setup-makefiles.sh" "$@"
