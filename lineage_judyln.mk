@@ -36,8 +36,6 @@ TARGET_VENDOR_PRODUCT_NAME := judyln_lao_com
 TARGET_VENDOR_DEVICE_NAME := judyln
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE=judyln \
-    PRODUCT_NAME=judyln_lao_com \
-    PRIVATE_BUILD_DESC="judyln_lao_com-user 10 QKQ1.191222.002 8450100201101 release-keys"
-
-BUILD_FINGERPRINT := "lge/judyln_lao_com/judyln:10/QKQ1.191222.002/8450100201101:user/release-keys"
+    DeviceName=judyln_lao_com \
+    BuildDesc="judyln_lao_com-user 10 QKQ1.191222.002 8450100201101 release-keys" \
+    BuildFingerprint=lge/judyln_lao_com/judyln:10/QKQ1.191222.002/8450100201101:user/release-keys
